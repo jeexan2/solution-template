@@ -50,7 +50,8 @@ public class Solution implements Runnable {
                     List<Integer> rowTable = new ArrayList<>();
                     for(Integer col = 0; col < _column; col++){
                         Integer num = scan.nextInt();
-                        rowTable.add(num);
+                        if(num >= Integer.MIN_VALUE && num <= Integer.MAX_VALUE)
+                            rowTable.add(num);
                     }
                     this._tableRecords.add(rowTable);
                 }
